@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ArgoCD
+metadata:
+  name: open-management-portal-argocd
+spec:
+  dex:
+    image: quay.io/redhat-cop/dex
+    version: v2.22.0-openshift
+    openShiftOAuth: true
+  rbac: {}
+  server:
+    route: true
