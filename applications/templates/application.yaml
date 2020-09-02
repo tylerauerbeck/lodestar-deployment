@@ -1,4 +1,5 @@
 {{- range .Values.applications }}
+{{ $validate := default true .validate }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -38,7 +39,5 @@ spec:
     automated:
       prune: true
       selfHeal: true
-{{- if not $.Values.validate }}
-    validate: false
-{{- end }}
+    validate: {{- toYaml $validate| indent 2 }}
 {{- end }}
