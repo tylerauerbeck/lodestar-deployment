@@ -114,6 +114,7 @@ applications:
 
 - name: agnosticv-operator
   url: https://github.com/redhat-gpte-devopsautomation/agnosticv-operator.git
+  validate: false
   path: helm
   ref: *agnosticvVersion
   deploymentNamespace: lodestar-babylon-operators
@@ -128,6 +129,7 @@ applications:
 
 - name: anarchy-operator
   url: https://github.com/pabrahamsson/anarchy-operator.git
+  validate: false
   path: helm
   ref: *anarchyVersion
   deploymentNamespace: lodestar-babylon-operators
@@ -145,6 +147,7 @@ applications:
 
 - name: poolboy
   url: https://github.com/redhat-cop/poolboy.git
+  validate: false
   path: helm
   ref: *poolboyVersion
   deploymentNamespace: lodestar-babylon-operators
