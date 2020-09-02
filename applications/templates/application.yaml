@@ -5,6 +5,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ .name }}
+{{- if (eq $validate false) }}
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+{{- end }}
 spec:
   destination:
     namespace: {{ default $.Values.deploymentNamespace .deploymentNamespace }}
