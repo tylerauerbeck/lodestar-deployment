@@ -4,10 +4,6 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ .name }}
-{{- if not $.Values.validate }}
-  annotations:
-    argocd.argoproj.io/sync-options: Validate=false
-{{- end }}
 spec:
   destination:
     namespace: {{ default $.Values.deploymentNamespace .deploymentNamespace }}
@@ -42,4 +38,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
+{{- if not $.Values.validate }}
+    validate: false
+{{- end }}
 {{- end }}
