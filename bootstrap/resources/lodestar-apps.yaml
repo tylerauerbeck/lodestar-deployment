@@ -9,8 +9,8 @@ spec:
   project: default
   source:
     path: "applications/"
-    repoURL: "https://github.com/rht-labs/lodestar-deployment.git"
-    targetRevision: "master"
+    repoURL: "https://github.com/tylerauerbeck/lodestar-deployment.git"
+    targetRevision: "val-test"
   syncPolicy:
     automated:
       prune: true
