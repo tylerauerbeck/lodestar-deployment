@@ -12,4 +12,5 @@ spec:
     repoURL: "https://github.com/rht-labs/lodestar-frontend.git"
     targetRevision: "master"
     helm:
-      values:
+      values: |
+        imageTag: master
