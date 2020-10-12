@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lodestar-agnosticvrepos
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+#    path: runtime/agnosticvrepo/
+#    repoURL: ssh://git@gitlab.consulting.redhat.com:2222/rht-labs/labs-sre/hosting/config.git
+#    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
