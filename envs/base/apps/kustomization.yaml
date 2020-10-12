@@ -6,6 +6,7 @@ resources:
 - lodestar-frontend.yaml
 - lodestar-git-api.yaml
 - lodestar-status.yaml
+- lodestar-agnosticv-repo.yaml
 patches:
 - patch: |-
     - op: add
